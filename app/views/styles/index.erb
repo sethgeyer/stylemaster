@@ -1,0 +1,496 @@
+<h3>Make a Div Expand and Shrink on Mouse Contact</h3>
+<h4>Search:  .mouseenter .mouseleave .animate</h4>
+
+<%text = <<TEXT
+
+<div id=expandable>
+  <div id="red"></div>
+  <div id="blue"></div>
+  <div id="yellow"></div>
+  <div id="green"></div>
+</div>
+
+<script>
+$('#expandable > div').mouseenter(function() {
+  $(this).animate({ height: '+=10px'});
+});
+$('div').mouseleave(function() {
+  $(this).animate({ height: '-=10px'});
+});
+</script>
+TEXT
+%>
+
+<%=text.html_safe%>
+
+<pre>
+  <%=text%>
+</pre>
+-------------------------------------------------------------------
+-------------------------------------------------------------------
+
+<h3>Make something disappear or fadeout on click... then fade in afterwards</h3>
+<h4>Search: fadeout hide fadein</h4>
+
+<%text = <<TEXT
+
+<div id="hideable">
+  <div id = 'red'></div>
+</div>
+
+<script>
+$('#hideable > div').on('click', function() {
+  $(this).fadeOut(1000);
+  $('div').fadeIn(1000);
+});
+</script>
+TEXT
+%>
+
+<%=text.html_safe%>
+
+<pre>
+  <%=text%>
+</pre>
+-------------------------------------------------------------------
+-------------------------------------------------------------------
+<h3>How to Bold and Unbold Opaque Button on Mouseover and Mouseleave</h3>
+<h4>Search: mouseover bold opaque</h4>
+
+<%text = <<TEXT
+
+<div id='fadeable'>
+  <div id="opaque_blue"><br/><strong>Click Me!</strong></div>
+</div>
+
+<script>
+$('#fadeable > div').on('mouseover', function() {
+  $(this).fadeTo('fast', 1);
+});
+
+$('#fadeable > div').on('mouseleave', function() {
+  $(this).fadeTo('fast', 0.5);
+})
+</script>
+TEXT
+%>
+
+<%=text.html_safe%>
+
+<pre>
+  <%=text%>
+</pre>
+-------------------------------------------------------------------
+-------------------------------------------------------------------
+<h3>Hide Stuff on a Button Click and then Reshow on Button Click</h3>
+<h4>Search: hide, toggle, click, button find parents (could use siblings as well)</h4>
+
+<%text = <<TEXT
+
+<div id=hideable_on_click>
+  <div id='red'></div>
+  <div id='blue'></div>
+  <div id='green'></div>
+  <div id='red'></div>
+  <br/>
+  <button>Click Me!</button>
+</div>
+
+
+<script>
+$('#hideable_on_click > button').on('click', function() {
+  var hideable_divs = $(this).parents('#hideable_on_click').find('div')
+  hideable_divs.toggle();
+
+})
+</script>
+TEXT
+%>
+
+<%=text.html_safe%>
+
+<pre>
+  <%=text%>
+</pre>
+-------------------------------------------------------------------
+-------------------------------------------------------------------
+<h3>"Select" items as jQuery Objects.  Click on yellow and red to make them disappear</h3>
+<h4>Search: flexible selections multiple select items click</h4>
+
+<%text = <<TEXT
+
+<div id='select_items'>
+  <div id='red'></div>
+  <div id='yellow'></div>
+  <div id='green'></div>
+  <div id='blue'></div>
+</div>
+
+<script>
+  $('#select_items > #red, #select_items > #yellow').on('click', function() {
+    $(this).fadeOut(1000);
+  });
+</script>
+TEXT
+%>
+
+<%=text.html_safe%>
+
+<pre>
+  <%=text%>
+</pre>
+-------------------------------------------------------------------
+-------------------------------------------------------------------
+<h3>Dropdown Slide Toggle</h3>
+<h4>Search: dropdown slide toggle click</h4>
+
+<%text = <<TEXT
+
+<div id="slide_bar">
+  <div class="panel">
+  <br />
+  <br />
+  <p>Now you see me!</p>
+  </div>
+  <p class="slide">
+    <div class="pull-me">Slide Up/Down</div>
+  </p>
+</div>
+
+<script>
+$('#slide_bar .pull-me').on('click', function() {
+  $('.panel').slideToggle('slow')
+});
+</script>
+TEXT
+%>
+
+<%=text.html_safe%>
+
+<pre>
+  <%=text%>
+</pre>
+-------------------------------------------------------------------
+-------------------------------------------------------------------
+
+<h3>Appending to and adding after a Div on Click</h3>
+<h4>Search: append after</h4>
+
+<%text = <<TEXT
+
+<div id="append">
+  <div id='red'>
+    <div>1st Item</div>
+  </div>
+</div>
+
+<script>
+
+$('#append div').on('click', function() {
+  $(this).append('<div>last item</div>');
+  $(this).after('<div>added after</div>');
+
+})
+</script>
+TEXT
+%>
+
+<%=text.html_safe%>
+
+<pre>
+  <%=text%>
+</pre>
+-------------------------------------------------------------------
+-------------------------------------------------------------------
+<h3>Prepend and Before</h3>
+<h4>prepend before</h4>
+
+<%text = <<TEXT
+
+<div id="prepend">
+  <div id='red'>
+    <div>1st Item</div>
+  </div>
+</div>
+
+<script>
+
+$('#prepend div').on('click', function() {
+  $(this).prepend('<div>new_first_item</div>');
+  $(this).before('<div>added before</div>');
+})
+</script>
+TEXT
+%>
+
+<%=text.html_safe%>
+
+<pre>
+  <%=text%>
+</pre>
+-------------------------------------------------------------------
+-------------------------------------------------------------------
+
+<h3>Empty</h3>
+<h4>empty remove (empty </h4>
+<p>empty clears out the contents of an element and removes all of its descendents.  Remove does the same but also removes the element itself.</p>
+
+<%text = <<TEXT
+<div class="container">
+  <div id="one">Div #1
+    <p>Paragraph nested under 1</p>
+  </div>
+  <div id="two">Div #2
+    <p>Paragraph nested under 2</p>
+  </div>
+</div>
+
+
+<script>
+$('.container > div').on('click', function() {
+  $(this).empty()
+})
+</script>
+TEXT
+%>
+
+<%=text.html_safe%>
+
+<pre>
+  <%=text%>
+</pre>
+-------------------------------------------------------------------
+----------------------------------
+
+
+<h3>Add formatting of a div on click</h3>
+<h4>Search:addClass removeClass toggleClass</h4>
+<p>addClass, removeClass, toggleClass are all written similarly</p>
+
+<%text = <<TEXT
+
+<div id="classycolor">
+  <div class="box">Box 1</div>
+  <div class="box">Box 1</div>
+</div>
+
+<script>
+  $('#classycolor div').on('click', function() {
+    $(this).toggleClass('blue-box');
+  })
+</script>
+TEXT
+%>
+
+<%=text.html_safe%>
+
+<pre>
+  <%=text%>
+</pre>
+-------------------------------------------------------------------
+----------------------------------
+
+
+<h3>Changing a button content on click</h3>
+<h4>Search: button, content, click, change </h4>
+
+<%text = <<TEXT
+
+<button name="submit">Submit</button>
+
+<script>
+$('button[name=submit]').on('click', function() {
+  $(this).html("processing...");
+})
+</script>
+TEXT
+%>
+
+<%=text.html_safe%>
+
+<pre>
+  <%=text%>
+</pre>
+-------------------------------------------------------------------
+----------------------------------
+
+
+<h3>Input Field is Highlighted When Entered</h3>
+<h4>Search: focus css</h4>
+
+<%text = <<TEXT
+
+<form id='higltform'>
+  Name: <input type='text' name='name'></input>
+</form>
+
+<script>
+$('#higltform > input').focus( function() {
+  $(this).css('outline-color','#FF0000')
+})
+</script>
+TEXT
+%>
+
+<%=text.html_safe%>
+
+<pre>
+  <%=text%>
+</pre>
+-------------------------------------------------------------------
+----------------------------------
+
+
+<h3></h3>
+<h4>Search</h4>
+
+<%text = <<TEXT
+
+
+
+<script>
+
+</script>
+TEXT
+%>
+
+<%=text.html_safe%>
+
+<pre>
+  <%=text%>
+</pre>
+-------------------------------------------------------------------
+----------------------------------
+
+
+<h3></h3>
+<h4>Search</h4>
+
+<%text = <<TEXT
+
+
+
+<script>
+
+</script>
+TEXT
+%>
+
+<%=text.html_safe%>
+
+<pre>
+  <%=text%>
+</pre>
+-------------------------------------------------------------------
+----------------------------------
+
+
+<h3></h3>
+<h4>Search</h4>
+
+<%text = <<TEXT
+
+
+
+<script>
+
+</script>
+TEXT
+%>
+
+<%=text.html_safe%>
+
+<pre>
+  <%=text%>
+</pre>
+-------------------------------------------------------------------
+----------------------------------
+
+
+<h3></h3>
+<h4>Search</h4>
+
+<%text = <<TEXT
+
+
+
+<script>
+
+</script>
+TEXT
+%>
+
+<%=text.html_safe%>
+
+<pre>
+  <%=text%>
+</pre>
+-------------------------------------------------------------------
+----------------------------------
+
+
+<h3></h3>
+<h4>Search</h4>
+
+<%text = <<TEXT
+
+
+
+<script>
+
+</script>
+TEXT
+%>
+
+<%=text.html_safe%>
+
+<pre>
+  <%=text%>
+</pre>
+-------------------------------------------------------------------
+----------------------------------
+
+
+<h3></h3>
+<h4>Search</h4>
+
+<%text = <<TEXT
+
+
+
+<script>
+
+</script>
+TEXT
+%>
+
+<%=text.html_safe%>
+
+<pre>
+  <%=text%>
+</pre>
+-------------------------------------------------------------------
+----------------------------------
+
+
+<h3></h3>
+<h4>Search</h4>
+
+<%text = <<TEXT
+
+
+
+<script>
+
+</script>
+TEXT
+%>
+
+<%=text.html_safe%>
+
+<pre>
+  <%=text%>
+</pre>
+-------------------------------------------------------------------
+----------------------------------
+

@@ -1,0 +1,123 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+h3 {
+    background-color: darkblue;
+    color: white;
+    height: 40px;
+    padding-left: 10px;
+    padding-top: 10px
+}
+
+#red {
+    background-color:#FF0000;
+    height:100px;
+    width:100px;
+    display: inline-block;
+}
+
+#blue {
+    background-color:#0000FF;
+    height:100px;
+    width:100px;
+    display: inline-block;
+}
+
+#yellow {
+    background-color:#E2BE22;
+    height:100px;
+    width:100px;
+    display: inline-block;
+}
+
+#green {
+    background-color:#008800;
+    height:100px;
+    width:100px;
+    display: inline-block;
+}
+
+#opaque_blue {
+    height: 60px;
+    width: 100px;
+    border-radius: 5px;
+    background-color: #69D2E7;
+    text-align: center;
+    color: #FFFFFF;
+    font-family: Verdana, Arial, Sans-Serif;
+    opacity: 0.25;
+}
+
+/*Slide Toggle..........................................*/
+
+
+.pull-me{
+    -webkit-box-shadow: 0 0 8px #FFD700;
+    -moz-box-shadow: 0 0 8px #FFD700;
+    box-shadow: 0 0 8px #FFD700;
+    cursor:pointer;
+}
+.panel {
+    background: #ffffbd;
+    background-size:90% 90%;
+    height:100px;
+    width: 200px;
+    display:none;
+    font-family:garamond,times-new-roman,serif;
+}
+.panel p{
+    text-align:center;
+}
+.slide {
+    margin:0;
+    padding:0;
+    border-top:solid 2px #cc0000;
+}
+.pull-me {
+    display:block;
+    position:relative;
+    right:-25px;
+    width:150px;
+    height:20px;
+    font-family:arial,sans-serif;
+    font-size:14px;
+    color:#ffffff;
+    background:#cc0000;
+    text-decoration:none;
+    -moz-border-bottom-left-radius:5px;
+    -moz-border-bottom-right-radius:5px;
+    border-bottom-left-radius:5px;
+    border-bottom-right-radius:5px;
+}
+.pull-me p {
+    text-align:center;
+}
+
+/*..................................................*/
+
+
+
+.box {
+    border: 1px solid black;
+    width: 50px;
+    height: 25px;
+}
+
+.blue-box {
+    background-color: darkblue;
+    color: white;
+}
