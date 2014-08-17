@@ -121,3 +121,64 @@ h3 {
     background-color: darkblue;
     color: white;
 }
+
+.pretty-buttons {
+    border-radius: 5px;
+    background-color: #ABCDEF;
+    transition: background-color 0.5s ease;
+    display:inline;
+    font-size:25px;
+    padding:20px;
+    border:1px solid #ccc;
+    margin-top:10px;
+}
+
+.active-button {
+    background-color:#556677;
+}
+
+#mini {
+    width: 30px;
+}
+
+.listy {
+    background-color:lightslategrey;
+    border: 1px solid cornflowerblue;
+    padding-left: 12px;
+    margin-bottom: 3px;
+    height: 40px;
+    color:white;
+    border-radius:10px ;
+    vertical-align: middle;
+
+}
+
+
+
+#selectmenu .ui-selected {
+    background: #F39814; color: white;
+}
+
+
+#sortie li {
+    background: #eeeeee;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin: 3px;
+    padding: 0.4em;
+    font-size: 1em;
+    height: 16px;
+    font-family: Verdana, Arial, Sans-Serif;
+}
+
+
+
+
+/*.dive {*/
+    /*height: 50px;*/
+    /*width: 50px;*/
+    /*border-radius: 10px;*/
+    /*background-color: #FF0000;*/
+    /*position: relative;*/
+
+/*}*/
